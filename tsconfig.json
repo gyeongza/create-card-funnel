@@ -26,7 +26,8 @@
       "@/*": ["*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@common/*": ["components/common/*"]
+      "@common/*": ["components/common/*"],
+      "@contexts/*": ["contexts/*"]
     },
 
     /* emotion */
