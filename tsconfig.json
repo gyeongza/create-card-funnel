@@ -27,7 +27,12 @@
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@common/*": ["components/common/*"],
-      "@contexts/*": ["contexts/*"]
+      "@contexts/*": ["contexts/*"],
+      "@models/*": ["models/*"],
+      "@pages/*": ["pages/*"],
+      "@remote/*": ["remote/*"],
+      "@mock/*": ["mock/*"],
+      "@constants/*": ["constants/*"]
     },
 
     /* emotion */
