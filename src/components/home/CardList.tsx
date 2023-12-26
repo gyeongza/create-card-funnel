@@ -4,6 +4,7 @@ import { getCards } from '@/remote/card';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useCallback } from 'react';
 import Bedge from '../common/Bedge';
+import { useNavigate } from 'react-router-dom';
 
 function CardList() {
   const { data, hasNextPage, isFetching, fetchNextPage } = useInfiniteQuery({
@@ -25,6 +26,8 @@ function CardList() {
 
     fetchNextPage();
   }, [hasNextPage, isFetching, fetchNextPage]);
+
+  const navigate = useNavigate();
 
   if (data === null) {
     return null;
@@ -55,6 +58,9 @@ function CardList() {
                     card.payback != null ? <Bedge label={card.payback} /> : null
                   }
                   withArrow={true}
+                  onClick={() => {
+                    navigate(`/card/${card.id}`);
+                  }}
                 />
               );
             })}
