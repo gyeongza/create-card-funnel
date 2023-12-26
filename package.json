@@ -17,7 +17,9 @@
     "firebase": "^10.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1"
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-router-dom": "^6.20.1",
+    "swiper": "9"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0",
