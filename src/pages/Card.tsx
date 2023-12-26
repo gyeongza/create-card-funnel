@@ -21,19 +21,22 @@ function Card() {
     return <div>isLoading</div>;
   }
 
+  const {
+    corpName = '',
+    name = '',
+    promotion,
+    tags = [],
+    benefit = [],
+  } = data ?? {};
+
   const subTitle =
-    data?.promotion != null
-      ? removeHtmlTag(data.promotion.title)
-      : data?.tags.join('');
+    promotion != null ? removeHtmlTag(promotion.title) : tags.join('');
 
   return (
     <div>
-      <Top
-        title={`${data?.corpName} ${data?.name}`}
-        subTitle={subTitle ?? ''}
-      />
+      <Top title={`${corpName} ${name}`} subTitle={subTitle ?? ''} />
       <ul>
-        {data?.benefit.map((text, index) => {
+        {benefit.map((text, index) => {
           return (
             <ListRow
               key={text}
