@@ -3,6 +3,10 @@ import { useQuery } from '@tanstack/react-query';
 import { getCard } from '@/remote/card';
 import Top from '@/components/common/Top';
 import ListRow from '@/components/common/ListRow';
+import FixedBottomButton from '@/components/common/FixedBottomButton';
+import Flex from '@/components/common/Flex';
+import Text from '@/components/common/Text';
+import { css } from '@emotion/react';
 
 function Card() {
   const { id = '' } = useParams();
@@ -48,6 +52,15 @@ function Card() {
           );
         })}
       </ul>
+
+      {promotion != null ? (
+        <Flex direction="column" css={termsContainerStyles}>
+          <Text bold={true}>유의사항</Text>
+          <Text typography="t7">{removeHtmlTag(promotion.terms)}</Text>
+        </Flex>
+      ) : null}
+
+      <FixedBottomButton label="신청하기" onClick={() => {}} />
     </div>
   );
 }
@@ -86,5 +99,10 @@ export function IconCheck() {
     </svg>
   );
 }
+
+const termsContainerStyles = css`
+  margin-top: 80px;
+  padding: 0 24px 80px;
+`;
 
 export default Card;
