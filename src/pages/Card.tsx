@@ -73,7 +73,7 @@ function Card() {
         </Flex>
       ) : null}
 
-      <FixedBottomButton label="신청하기" onClick={() => {}} />
+      <FixedBottomButton disabled={true} label="신청하기" onClick={() => {}} />
     </div>
   );
 }
