@@ -8,15 +8,26 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 
 import Navbar from './components/common/Navbar';
+import PrivateRoute from './components/auth/PrivateRoute';
+import Apply from './pages/Apply';
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
+
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/card/:id" Component={Card} />
+        <Route
+          path="/apply/:id"
+          element={
+            <PrivateRoute>
+              <Apply />
+            </PrivateRoute>
+          }
+        />
         <Route path="/test" Component={Test} />
         <Route path="/Signup" Component={Signup} />
         <Route path="/Signin" Component={Signin} />

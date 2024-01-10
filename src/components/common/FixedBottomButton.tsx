@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 interface FixedBottomButtonProps {
   label: string;
   onClick: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 function FixedBottomButton({

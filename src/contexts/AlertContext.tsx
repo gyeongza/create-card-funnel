@@ -58,7 +58,10 @@ export function AlertContextProvider({
     <Context.Provider value={value}>
       {children}
       {$portal_root != null
-        ? createPortal(<Alert {...alertState} />, $portal_root)
+        ? createPortal(
+            <Alert buttonLabel="확인" {...alertState} />,
+            $portal_root,
+          )
         : null}
     </Context.Provider>
   );
