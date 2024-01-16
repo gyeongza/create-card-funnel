@@ -10,6 +10,7 @@ import Signin from './pages/Signin';
 import Navbar from './components/common/Navbar';
 import PrivateRoute from './components/auth/PrivateRoute';
 import Apply from './pages/Apply';
+import ApplyDone from './pages/ApplyDone';
 
 const App = () => {
   return (
@@ -25,6 +26,14 @@ const App = () => {
           element={
             <PrivateRoute>
               <Apply />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apply/done"
+          element={
+            <PrivateRoute>
+              <ApplyDone />
             </PrivateRoute>
           }
         />
