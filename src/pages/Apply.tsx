@@ -5,7 +5,7 @@ import { ApplyValues } from '@/models/apply';
 import { useState } from 'react';
 
 function Apply() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   const handleTermsChange = (terms: ApplyValues['terms']) => {
     console.log(terms);
